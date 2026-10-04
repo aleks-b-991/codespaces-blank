@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send North Star Bakery a pre-order request or general question, and find our location and hours of operation.">
+  <title>Contact and Pre-Orders | North Star Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img class="logo" src="media/bakery-logo.png" alt="North Star Bakery logo: a brown loaf of bread with a wheat stalk inside" width="200">
+    </a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="about.html">About Our Bakery</a></li>
+        <li><a href="contact.html" aria-current="page">Contact and Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Us and Request a Pre-Order</h1>
+    <p>Want your favorite loaf set aside, a platter for the office, or a custom cake for a celebration? Fill out the form below and we will reply within one business day to confirm your order. Payment is made in person at pickup.</p>
+
+    <section>
+      <h2>Pre-Order and Inquiry Form</h2>
+      <p>Fields marked with an asterisk (*) are required.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your Contact Information</legend>
+
+          <p>
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" autocomplete="name" required minlength="2" maxlength="80">
+          </p>
+
+          <p>
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+          </p>
+
+          <p>
+            <label for="phone">Phone number (optional, format 507-555-0142)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Use the format 507-555-0142">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Request</legend>
+
+          <p>
+            <label for="request-type">Request type *</label>
+            <select id="request-type" name="request-type" required>
+              <option value="">Choose a request type</option>
+              <option value="pre-order">Pre-order for pickup</option>
+              <option value="custom-cake">Custom or celebration cake</option>
+              <option value="event">Event or catering platter</option>
+              <option value="question">General question</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="pickup-date">Pickup date *</label>
+            <input type="date" id="pickup-date" name="pickup-date" required min="2026-10-01">
+          </p>
+
+          <p>
+            <label for="pickup-time">Preferred pickup time (optional)</label>
+            <input type="time" id="pickup-time" name="pickup-time" min="06:30" max="18:00" step="900">
+          </p>
+
+          <p>
+            <label for="quantity">Number of guests or items (optional)</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="200">
+          </p>
+
+          <p>
+            <label for="item-details">Item details *</label>
+            <textarea id="item-details" name="item-details" rows="5" cols="50" required minlength="10" maxlength="1000" placeholder="Example: 2 Signature Loaves and 1 dozen chocolate chunk cookies"></textarea>
+          </p>
+
+          <p>
+            <label for="allergy-notes">Allergy notes, if applicable (optional)</label>
+            <textarea id="allergy-notes" name="allergy-notes" rows="3" cols="50" maxlength="500" placeholder="Example: nut allergy, dairy-free"></textarea>
+          </p>
+        </fieldset>
+
+        <p class="checkbox">
+          <input type="checkbox" id="confirm" name="confirm" required>
+          <label for="confirm">I understand this is a request and the bakery will email me to confirm my order. *</label>
+        </p>
+
+        <p class="buttons">
+          <button type="submit">Send My Request</button>
+          <button type="reset">Clear Form</button>
+        </p>
+      </form>
+    </section>
+
+    <div class="split">
+      <section>
+        <h2>Visit the Bakery</h2>
+        <img src="media/bakery-storefront.png" alt="The outside of North Star Bakery, with a large display window of breads and pastries beside a gray-green wooden door" width="500">
+        <address>
+          North Star Bakery<br>
+          214 Maple Avenue<br>
+          Northfield, MN 55057<br>
+          Phone: <a href="tel:+15075550142">(507) 555-0142</a><br>
+          Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a>
+        </address>
+        <p>We are one block from the Maple Avenue bus stop, with free street parking and a bike rack out front.</p>
+      </section>
+
+      <section>
+        <h2>Hours of Operation</h2>
+        <table>
+          <caption>North Star Bakery weekly hours</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Monday</th>
+              <td>Closed</td>
+            </tr>
+            <tr>
+              <th scope="row">Tuesday to Friday</th>
+              <td>6:30 a.m. to 6:00 p.m.</td>
+            </tr>
+            <tr>
+              <th scope="row">Saturday</th>
+              <td>7:00 a.m. to 3:00 p.m.</td>
+            </tr>
+            <tr>
+              <th scope="row">Sunday</th>
+              <td>7:00 a.m. to 3:00 p.m.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Pre-orders are ready for pickup after 8:00 a.m. Custom cakes need at least 72 hours' notice.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>North Star Bakery, 214 Maple Avenue, Northfield, MN 55057 | (507) 555-0142</p>
+    <p>&copy; 2026 North Star Bakery. Baked by hand, shared with our neighbors.</p>
+  </footer>
+</body>
+</html>
