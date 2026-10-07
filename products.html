@@ -26,6 +26,7 @@
   <main>
     <h1>Our Breads, Pastries, and Cakes</h1>
     <p>Everything on our shelves is made from scratch in small batches. Prices below are ranges because sizes and flavors change with the seasons. We do not take payment online. Simply <a href="contact.html">send us a pre-order request</a> and pay when you pick up.</p>
+    <p id="list-summary" class="list-summary">Tap "Add to my list" on anything you like to build a pre-order list.</p>
 
     <section>
       <h2>Breads</h2>
@@ -43,14 +44,17 @@
         <article class="card">
           <h3>Country Sourdough</h3>
           <p>Our everyday white sourdough with a tangy flavor and chewy crust. Great for sandwiches and toast. <strong>$7.00 to $9.00</strong></p>
+          <button type="button" class="add-button" data-id="country-sourdough">Add to my list</button>
         </article>
         <article class="card">
           <h3>Seeded Multigrain</h3>
           <p>Whole wheat, flax, sunflower, and pumpkin seeds in a hearty, nutty loaf. <strong>$8.00 to $10.00</strong></p>
+          <button type="button" class="add-button" data-id="seeded-multigrain">Add to my list</button>
         </article>
         <article class="card">
           <h3>Baguettes and Dinner Rolls</h3>
           <p>Crisp French baguettes and soft rolls baked fresh every afternoon for family dinners. <strong>$3.50 to $12.00</strong> (single baguette to a dozen rolls)</p>
+          <button type="button" class="add-button" data-id="baguettes-rolls">Add to my list</button>
         </article>
       </div>
     </section>
@@ -63,14 +67,17 @@
         <article class="card">
           <h3>Croissants</h3>
           <p>Flaky, all-butter croissants in plain, chocolate, and almond. <strong>$3.50 to $5.00</strong></p>
+          <button type="button" class="add-button" data-id="croissants">Add to my list</button>
         </article>
         <article class="card">
           <h3>Cinnamon Rolls and Morning Buns</h3>
           <p>Soft, swirled rolls with brown sugar and cinnamon, finished with vanilla glaze. <strong>$4.00 to $5.50</strong></p>
+          <button type="button" class="add-button" data-id="cinnamon-rolls">Add to my list</button>
         </article>
         <article class="card">
           <h3>Cookies and Scones</h3>
           <p>Chocolate chunk cookies, iced butter cookies, and seasonal fruit scones. <strong>$2.50 to $4.50</strong></p>
+          <button type="button" class="add-button" data-id="cookies-scones">Add to my list</button>
         </article>
       </div>
     </section>
@@ -83,22 +90,29 @@
         <article class="card">
           <h3>Everyday Cakes</h3>
           <p>Six-inch cakes in chocolate, vanilla bean, carrot, and lemon, perfect for a family dessert. <strong>$28.00 to $40.00</strong></p>
+          <button type="button" class="add-button" data-id="everyday-cakes">Add to my list</button>
         </article>
         <article class="card">
           <h3>Celebration and Custom Cakes</h3>
           <p>Layered cakes decorated for birthdays, showers, and weddings, with custom flavors and messages. <strong>$45.00 to $150.00</strong></p>
+          <button type="button" class="add-button" data-id="custom-cakes">Add to my list</button>
         </article>
         <article class="card">
           <h3>Event Platters</h3>
           <p>Assorted pastry, cookie, and mini loaf platters for office meetings and event planners, serving 12 to 50 guests. <strong>$35.00 to $180.00</strong></p>
+          <button type="button" class="add-button" data-id="event-platters">Add to my list</button>
         </article>
       </div>
     </section>
 
-    <section class="featured">
-      <h2>Ready to Order?</h2>
-      <p>Let us know what you would like and when you want to pick it up, and we will have it ready for you. </p>
-      <p><a class="button" href="contact.html">Request a pre-order or ask a question</a></p>
+    <section class="featured" id="my-list">
+      <h2>My Pre-Order List</h2>
+      <p id="list-message">Your list is empty. Tap "Add to my list" on any bread, pastry, or cake above.</p>
+      <ul id="list-items" class="order-list"></ul>
+      <p class="buttons">
+        <a class="button" href="contact.html">Send my list as a pre-order request</a>
+        <button type="button" id="clear-list" class="secondary">Clear my list</button>
+      </p>
     </section>
   </main>
 
@@ -106,5 +120,7 @@
     <p>North Star Bakery, 214 Maple Avenue, Northfield, MN 55057 | (507) 555-0142</p>
     <p>&copy; 2026 North Star Bakery. Baked by hand, shared with our neighbors.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
